@@ -64,10 +64,14 @@ public class Scrabble {
 
 				for (int i = 0; i < s.length(); i++) {
 
-					s = s.substring(0, s.length() - i);
-					
+					String str1 = s.substring(0, s.length() - i);
+					String str2 = s.substring(i+1, s.length());
+					String str3 = s.substring(i, i);
+
 					System.out.println(s + " try:" + i);
-					permute(s, "");
+					permute(str1, "");
+					permute(str2, "");
+					permute(str3, "");
 
 				}
 
